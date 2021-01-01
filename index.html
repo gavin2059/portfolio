@@ -19,13 +19,24 @@
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
 
-  <!-- Template Main CSS File -->
+  <!-- Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+
+  <script>
+  // Loading GIF
+  jQuery(window).load(function() {
+    $(".se-pre-con").fadeOut("slow");
+    $('.credits').hide();
+    $('.credits').removeAttr('hidden');
+    $('.credits').fadeIn("slow");
+  });
+
+  </script>
 
 </head>
 
@@ -46,17 +57,18 @@
           <li><a href="#about">About</a></li>
           <li><a href="#experiences">Experiences</a></li>
           <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav><!-- .nav-menu -->
 
       <div class="social-links">
         
-        <a href="https://github.com/gavin2059/" class="github"><i class="bx bxl-github"></i><span>GitHub</span></a>
+        <a href="https://github.com/gavin2059/" class="github" target="_blank"><i class="bx bxl-github"></i><span>GitHub</span></a>
         <br>
-        <a href="https://www.linkedin.com/in/zeyuanzhang/" class="linkedin"><i class="icofont-linkedin"></i><span>LinkedIn</span></a>
+        <a href="https://www.linkedin.com/in/zeyuanzhang/" class="linkedin" target="_blank"><i class="icofont-linkedin"></i><span>LinkedIn</span></a>
         <br>
-        <a href="assets/resume.pdf" class="resume"><i class="icofont-clip-board"></i><span>Resume</span></a>
+        <a href="assets/resume.pdf" class="resume" target="_blank"><i class="icofont-clip-board"></i><span>Resume</span></a>
+        <br>
+        <a href="#" class="email"><i class="icofont-mail-box"></i><span>Email</span></a>
 
        
       </div>
@@ -64,11 +76,7 @@
 
     </div>
   </header><!-- End Header -->
-    <div class="credits">
-    <!-- All the links in the footer should remain intact. -->
-    <!-- You can delete the links only if you purchased the pro version. -->
-    <!-- Licensing information: https://bootstrapmade.com/license/ -->
-    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/personal-free-resume-bootstrap-template/ -->
+    <div class="credits" hidden>
     Art By <a href="https://www.deviantart.com/jessicawoulfe">Jessica Woulfe</a>
   </div>
 
@@ -80,7 +88,7 @@
 
       <div class="section-title">
         <h2>About</h2>
-        <p>About Me</p>
+        <p>My Bio</p>
       </div>
 
       <div class="row">
@@ -122,12 +130,14 @@
             <li><i class="icofont-rounded-right"></i>Data Structures</li>
             <li><i class="icofont-rounded-right"></i>Discrete Mathematics</li>
             <li><i class="icofont-rounded-right"></i>Dynamic Programming</li>
+            <li><i class="icofont-rounded-right"></i>P&NP</li>
           </ul>
         </div>
         <div class="col-lg-4">
           <ul><strong>Applied Mathematics</strong>
-            <li><i class="icofont-rounded-right"></i>Neural Networks, K-Means Clustering, etc.</li>
-            <li><i class="icofont-rounded-right"></i>Operations Research & Optimization</li>
+            <li><i class="icofont-rounded-right"></i>Neural Networks</li>
+            <li><i class="icofont-rounded-right"></i>Spectral, K-Means Clustering</li>
+            <li><i class="icofont-rounded-right"></i>Operations Research</li>
             <li><i class="icofont-rounded-right"></i>Linear Algebra for Data Science</li>
           </ul>
         </div>
@@ -149,7 +159,7 @@
         <div class="row">
         <div class= "d-flex align-items-stretch">
           <div class="icon-box">
-            <div class="icon"><i class="bx bxl-dribbble"></i><span>&nbspFeb 2020 - Aug 2020</span></div>
+            <div class="icon"><i class="icofont-hard-disk"></i><span>&nbspFeb 2020 - Aug 2020</span></div>
             <h4>Research Assistant for Dr. Peter J. Varman</h4>
             <p>
             I worked with Dr. Varman to implement Fair-EDF, an earliest-deadline-first request scheduler seeking to fulfill the same percentage of requests from different clients. This involved using exploring different linear regression and decision tree models to predict SSD processing times which are used in the algorithm to predict whether put a request in the low priority queue. 
@@ -164,13 +174,11 @@
 
         <div class= "d-flex align-items-stretch">
           <div class="icon-box">
-            <div class="icon"><i class="bx bxl-dribbble"></i><span>&nbspSep 2019 - Dec 2020</span></div>
+            <div class="icon"><i class="icofont-search-stock"></i><span>&nbspSep 2019 - Dec 2020</span></div>
             <h4>Analyst, Rice Undergraduate Investment Fund</h4>
             <p>
             I was a member of the Porfolio Review section, which manages and oversees the fund's holdings. During my time with the fund, I worked with the Industrials and Energy sectors on buy and sell pitches, industry overviews, and semesterly reports.
             In Energy, I protected a return of 44% on the stock CLB by pitching to hold it rather than sell it.
-
-
             </p>
           </div>
         </div>
@@ -179,7 +187,7 @@
 
         <div class= "d-flex align-items-stretch">
           <div class="icon-box">
-            <div class="icon"><i class="bx bxl-dribbble"></i><span>&nbspSep 2019 - May 2020</span></div>
+            <div class="icon"><i class="icofont-speed-meter"></i><span>&nbspSep 2019 - May 2020</span></div>
             <h4>Member, Rice Hyperloop Propulsion Team</h4>
             <p>
               As a member of the Propulsion team, I helped recreate the prototype of a cold gas thrust chamber for our model train by producing schematics of various parts on SolidWorks, machining them, and finding suitable components to use for building the prototype. 
@@ -191,7 +199,7 @@
 
         <div class= "d-flex align-items-stretch">
           <div class="icon-box">
-            <div class="icon"><i class="bx bxl-dribbble"></i><span>&nbspApril 2016 - April 2019</span></div>
+            <div class="icon"><i class="icofont-music-notes"></i><span>&nbspApril 2016 - April 2019</span></div>
             <h4>General Manager, UNA Community Youth Band</h4>
             <p>
               I was a percussionist and pianist for the UNA Youth Band, a concert band run by youth in the Vancouver area focused on providing students who were not able to be part of a school band a similar opportunity. As a promoter in 2017 and 2018, and manager in 2019, I increased the band size by 33% by streamlining the recruiting process with a list of local music instructors. As the manager, I organized 12 concerts, the rehearsal venue, and distribution of volunteer hours to 20+ students. I also contributed to making the website and our budget. 
@@ -219,13 +227,13 @@
         <div class="row">
         <div class= "d-flex align-items-stretch">
           <div class="icon-box">
-            <div class="icon"><i class="bx bxl-dribbble"></i><span>&nbspDec 2020 - Present</span></div>
+            <div class="icon"><i class="icofont-sale-discount"></i><span>&nbspDec 2020 - Present</span></div>
             <h4>When To Buy</h4>
             <p>
             I'm creating a program to predict the prices of products with Facebook Prophet, a Time Series forecasting model. I'm hoping that users of this program (myself included :p) can have a better shot at getting products they want with the best deals.
             </p>
             <div class="social-links repo">
-              <a href="https://github.com/gavin2059/"><i class="bx bxl-github"></i><span>Repo.</span></a>
+              <a href="https://github.com/gavin2059/when-to-buy" target="_blank"><i class="bx bxl-github"></i><span>Repo.</span></a>
             </div>
           </div>
         </div>
@@ -234,15 +242,15 @@
 
         <div class= "d-flex align-items-stretch">
           <div class="icon-box">
-            <div class="icon"><i class="bx bxl-dribbble"></i><span>&nbspDec 2020 - Present</span></div>
+            <div class="icon"><i class="icofont-loop"></i><span>&nbspDec 2020 - Present</span></div>
             <h4>(no)Pedal</h4>
             <p>
-            Recently, I started playing the guitar, and wanted to make a completely digital substitute to a physical loop pedal that can be used anywhere. Right now, looper is technically functional, but I am still solving several issues including poor audio recording quality, and the inevitable delay between users pressing record and moving their hands to the guitar. I'm exploring using some sort of Machine Learning algorithm to detect beginning and ending silence to clip the recording.
-            This is my first webapp project so I'm running into many roadblocks but enjoying the learning process :) 
+            Recently, I started playing the guitar, and wanted to make a completely digital substitute to a physical loop pedal that can be used anywhere, with an electronic or acoustic guitar. Right now, the looper is technically functional, but I am still solving several issues including poor audio recording quality, and the inevitable delay between users pressing record and moving their hands to the guitar. I'm thinking of using some sort of Machine Learning algorithm to detect beginning and ending silence to clip the recording.
+            This is my first webapp project so I'm running into many roadblocks but enjoying the learning process :)
             </p>
               <div class="social-links repo">
-              <a href="https://github.com/gavin2059/nopedal"><i class="bx bxl-github"></i><span>Repo.</span></a>
-              <a href="https://gavin2059.github.io/nopedal/"><i class="icofont-music"></i><span>Try it!</span></a>
+              <a href="https://github.com/gavin2059/nopedal" target="_blank"><i class="bx bxl-github"></i><span>Repo.</span></a>
+              <a href="https://gavin2059.github.io/nopedal/" target="_blank"><i class="icofont-music"></i><span>Try it!</span></a>
             </div>
           </div>
         </div>
@@ -251,13 +259,15 @@
 
         <div class= "d-flex align-items-stretch">
           <div class="icon-box">
-            <div class="icon"><i class="bx bxl-dribbble"></i><span>&nbspAug 2020 - Nov 2020</span></div>
+            <div class="icon"><i class="bx bxl-python"></i><span>&nbspAug 2020 - Nov 2020</span></div>
             <h4>Python Testcase Generator</h4>
             <p>
               I wrote a program in Java to generate a concise set of test cases to ensure a correct implementation for Python programs given a set of reference implementations. The program parses a config file, recursively generates a large set of test cases, then uses the greedy 'solution' of the hitting set problem to reduce said set to a significantly smaller set of test cases, while ensuring that the concise set of tests will catch all buggy implementations.
              </p>
                <div class="social-links repo">
+              <!--
               <a href="https://github.com/gavin2059/"><i class="bx bxl-github"></i><span>Repo.</span></a>
+               -->
             </div>
           </div>
         </div>
@@ -266,7 +276,7 @@
 
         <div class= "d-flex align-items-stretch">
           <div class="icon-box">
-            <div class="icon"><i class="bx bxl-dribbble"></i><span>&nbspJun 2020 - July 2020</span></div>
+            <div class="icon"><i class="icofont-table-tennis"></i><span>&nbspJun 2020 - July 2020</span></div>
             <h4>Bluetooth Controllable Table Tennis Robot</h4>
             <p>
               I designed a table tennis serving robot with a phone companion app to configure hitting patterns, spins, speeds via programming, circuit design, mechanical design. This involved creating an Arduino program and mobile app, a custom circuit involving DC and Servo motors and H-Bridges to control the robot.
@@ -281,63 +291,19 @@
 
   </section><!-- End projects Section -->
 
-  <!-- ======= Contact Section ======= -->
-  <section id="contact" class="contact">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Contact</h2>
-        <p>Email Me</p>
-      </div>
-
-      <form action="forms/contact.php" method="post" role="form" class="php-email-form mt-4">
-        <div class="form-row">
-          <div class="col-md-6 form-group">
-            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-            <div class="validate"></div>
-          </div>
-          <div class="col-md-6 form-group">
-            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-            <div class="validate"></div>
-          </div>
-        </div>
-        <div class="form-group">
-          <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-          <div class="validate"></div>
-        </div>
-        <div class="form-group">
-          <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-          <div class="validate"></div>
-        </div>
-        <div class="mb-3">
-          <div class="loading">Loading</div>
-          <div class="error-message"></div>
-          <div class="sent-message">Your message has been sent. Thank you!</div>
-        </div>
-        <div class="text-center"><button type="submit">Send Message</button></div>
-      </form>
-
-    </div>
-  </section><!-- End Contact Section -->
-
-
-
-
-
   <!-- Vendor JS Files -->
   <script src="assets/vendor/jquery/jquery.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-  <script src="assets/vendor/counterup/counterup.min.js"></script>
-  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/venobox/venobox.min.js"></script>
 
-  <!-- Template Main JS File -->
+  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
 </body>
+
+<div class="se-pre-con">
+  <img src="/assets/img/loading.gif">
+</div>
+
 
 </html>

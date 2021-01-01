@@ -1,5 +1,7 @@
 !(function($) {
   "use strict";
+var home = true;
+
 
   // Nav Menu
   $(document).on('click', '.nav-menu a, .mobile-nav a', function(e) {
@@ -15,7 +17,7 @@
         }
 
         if (hash == '#header') {
-          $('.credits').show();
+          $('.credits').fadeIn(200); home = true;
           $('#header').removeClass('header-top');
           $("section").removeClass('section-show');
           if ($('body').hasClass('mobile-nav-active')) {
@@ -26,7 +28,8 @@
           return;
         }
         else{
-          $('.credits').hide();
+          $('.credits').fadeOut(200);
+          home = false;
         }
 
         if (!$('#header').hasClass('header-top')) {
@@ -57,14 +60,33 @@
     }
   });
 
+  // Hide scroll
   $(document).scroll(()=>{
     if(document.scrollingElement.scrollTop != 0){
         $('header').removeClass('opacity95');
+        if(!$('header').hasClass('opacity100')){
+      $('header').addClass('opacity100');
+    }
+
     }
     else{
+      $('header').removeClass('opacity100');
       if(!$('header').hasClass('opacity95')){
       $('header').addClass('opacity95');
     }
+    }
+  });
+
+  // Show contact
+  var emailShown = false;
+  $('.email').click(()=>{
+    if(!emailShown){
+    document.querySelector('.email').innerHTML = '<i class="icofont-mail-box"></i><span>ZZ66[at]rice.edu</span></a>';
+    emailShown = true;
+    }
+    else{
+    document.querySelector('.email').innerHTML = '<i class="icofont-mail-box"></i><span>Email</span></a>';
+    emailShown = false;
     }
   });
 
@@ -91,10 +113,15 @@
     $('body').prepend('<button type="button" class="mobile-nav-toggle d-lg-none" id="mobile-menu-btn"><i class="icofont-navigation-menu"></i></button>');
     $('body').append('<div class="mobile-nav-overly"></div>');
 
-    var hidden = false;
     $('#mobile-menu-btn').click(()=>{
-      if(!hidden){$('.credits').fadeOut(350);hidden=true;}
-      else{$('.credits').fadeIn(350); hidden=false;}
+      if($('.credits').is(":visible")){
+        $('.credits').hide();
+        //$('.credits').fadeOut(200);
+      }
+      else if(home){
+        //$('.credits').fadeIn(200);
+        $('.credits').show();
+      }
     });
 
     $(document).on('click', '.mobile-nav-toggle', function(e) {
@@ -117,12 +144,6 @@
     $(".mobile-nav, .mobile-nav-toggle").hide();
   }
 
-  // jQuery counterUp
-  $('[data-toggle="counter-up"]').counterUp({
-    delay: 10,
-    time: 1000
-  });
-
-
-
 })(jQuery);
+
+ 
