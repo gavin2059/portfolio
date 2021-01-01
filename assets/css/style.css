@@ -1,6 +1,14 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+hr {
+  color: #fff;
+  width: 75%;
+  border: 1px solid white;
+  margin-top: 40;
+  margin-bottom: 40px;
+}
+
 html, body {
         height: 100%;
         margin: 0px;
@@ -52,7 +60,6 @@ a:hover {
   color: #5ae08f;
   text-decoration: none;
 }
-
 
 
 h1, h2, h3, h4, h5, h6 {
@@ -116,8 +123,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 40px;
 }
 
-#header .social-links a {
-
+#header .social-links a, .repo a {
   font-size: 16px;
   justify-content: center;
   align-items: center;
@@ -126,7 +132,7 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
-#header .social-links a:hover {
+#header .social-links a:hover, .repo a:hover {
   background: rgba(90, 224, 143, 0.95);
   padding: 3px;
   border-radius: 3%;
@@ -134,12 +140,24 @@ h1, h2, h3, h4, h5, h6 {
   height: 40px;
 }
 
-#header .social-links a i {
+#header .social-links a i, .repo a i, {
 
 }
 
-#header .social-links a i:hover {
+#header .social-links a i:hover, .repo a i:hover {
   background:#5ae08f;
+}
+
+.repo * {
+    transition: ease-in-out 0.3s;
+}
+
+.repo a {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 3px;
+  border-radius: 3%;
+  width: 40px;
+  height: 40px;
 }
 
 @media (max-width: 992px) {
@@ -403,6 +421,10 @@ section .container {
   color: #fff;
 }
 
+section .icon-box h4 {
+  color: #5ae08f;
+}
+
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
@@ -423,9 +445,9 @@ section .container {
 }
 
 .about-me ul li {
-  padding-top: 10px;
   position: relative;
   margin-left: 15px;
+  padding-top: 10px;
 }
 
 .about-me ul i {
@@ -434,7 +456,6 @@ section .container {
   color:#5ae08f;
   position: absolute;
   left: -20px;
-  top: 16px;
 }
 
 .about-me .content p:last-child {

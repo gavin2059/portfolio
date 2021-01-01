@@ -1,4 +1,5 @@
 TODO:
-- fill sections
+- fix arrows
+- loading animation
 - style scrollbar?
 - compatibility
