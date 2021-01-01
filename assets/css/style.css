@@ -146,6 +146,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #header .social-links {
   margin-top: 40px;
+  user-select: none;
 }
 
 #header .social-links a, .repo a {
@@ -157,6 +158,7 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
+@media (hover: hover) {
 #header .social-links a:hover, .repo a:hover {
   background: rgba(90, 224, 143, 0.95);
   padding: 3px;
@@ -164,13 +166,17 @@ h1, h2, h3, h4, h5, h6 {
   width: 40px;
   height: 40px;
 }
-
-#header .social-links a i, .repo a i, {
-
 }
 
-#header .social-links a i:hover, .repo a i:hover {
-  background:#5ae08f;
+@media (hover: none) {
+
+  #header .social-links a:active, .repo a:active {
+  background: rgba(90, 224, 143, 0.95);
+  padding: 3px;
+  border-radius: 3%;
+  width: 40px;
+  height: 40px;
+}
 }
 
 .repo * {

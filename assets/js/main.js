@@ -60,6 +60,13 @@ var home = true;
     }
   });
 
+  // blur socials button focus
+  $('.social-links').click(()=>{
+    setTimeout(()=>{
+      $('.descrip').click();
+    }, 0);
+  })
+
   // Hide scroll
   $(document).scroll(()=>{
     if(document.scrollingElement.scrollTop != 0){
