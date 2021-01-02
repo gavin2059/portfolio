@@ -24,12 +24,12 @@
   <!-- Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/modernizr/modernizr.js"></script>
 
   <script>
   // Loading GIF
-  jQuery(window).load(function() {
+  $(window).load(function() {
     $(".se-pre-con").fadeOut("slow");
     $('.credits').hide();
     $('.credits').removeAttr('hidden');
@@ -39,6 +39,11 @@
   </script>
 
 </head>
+
+<div class="se-pre-con">
+  <img src="/assets/img/loading.gif">
+</div>
+
 
 <body>
 
@@ -54,7 +59,7 @@
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li class="active"><a href="#header">Home</a></li>
-          <li><a href="#about">About</a></li>
+          <li><a href="#about">Bio</a></li>
           <li><a href="#experiences">Experiences</a></li>
           <li><a href="#projects">Projects</a></li>
         </ul>
@@ -87,7 +92,7 @@
     <div class="about-me container">
 
       <div class="section-title">
-        <h2>About</h2>
+        <h2>Bio</h2>
         <p>My Bio</p>
       </div>
 
@@ -301,9 +306,6 @@
 
 </body>
 
-<div class="se-pre-con">
-  <img src="/assets/img/loading.gif">
-</div>
 
 
 </html>

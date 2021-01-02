@@ -2,6 +2,14 @@
   "use strict";
 var home = true;
 
+  if (Modernizr.touch) { 
+    $('.social-links').removeClass('hoverable').addClass('nohover');
+    $('.repo').removeClass('hoverable').addClass('nohover');
+  } else { 
+    console.log('hoverable');
+     $('.social-links').addClass('hoverable').removeClass('nohover');
+     $('.repo').addClass('hoverable').removeClass('nohover');
+  }
 
   // Nav Menu
   $(document).on('click', '.nav-menu a, .mobile-nav a', function(e) {
@@ -59,13 +67,6 @@ var home = true;
       }
     }
   });
-
-  // blur socials button focus
-  $('.social-links').click(()=>{
-    setTimeout(()=>{
-      $('.descrip').click();
-    }, 0);
-  })
 
   // Hide scroll
   $(document).scroll(()=>{

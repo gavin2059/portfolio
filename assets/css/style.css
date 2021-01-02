@@ -26,9 +26,8 @@
 # General
 --------------------------------------------------------------*/
 hr {
-  color: #fff;
+  background: #fff;
   width: 75%;
-  border: 1px solid white;
   margin-top: 40;
   margin-bottom: 40px;
 }
@@ -108,7 +107,7 @@ h1, h2, h3, h4, h5, h6 {
   overflow-y: auto;
 }
 
-#header * {
+#header *, .repo * {
   transition: ease-in-out 0.3s;
 }
 
@@ -155,32 +154,48 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   color: #fff;
   line-height: 1;
-
 }
 
-@media (hover: hover) {
-#header .social-links a:hover, .repo a:hover {
+.hoverable a:hover {
   background: rgba(90, 224, 143, 0.95);
   padding: 3px;
   border-radius: 3%;
   width: 40px;
   height: 40px;
 }
+
+.nohover a:active {
+background: rgba(90, 224, 143, 0.95);
+padding: 3px;
+border-radius: 3%;
+width: 40px;
+height: 40px;
 }
 
-@media (hover: none) {
+@media(hover: none){
+#header .social-links a:hover {
+  background: rgba(90, 224, 143, 0);
+  padding: 0px;
+  border-radius: 0%;
+  width: auto;
+  height: auto;
+}
 
-  #header .social-links a:active, .repo a:active {
-  background: rgba(90, 224, 143, 0.95);
+.repo a:hover {
+  background: rgba(255, 255, 255, 0.2);
   padding: 3px;
   border-radius: 3%;
   width: 40px;
   height: 40px;
 }
-}
 
-.repo * {
-    transition: ease-in-out 0.3s;
+#header .social-links a:active, .repo a:active {
+background: rgba(90, 224, 143, 0.95);
+padding: 3px;
+border-radius: 3%;
+width: 40px;
+height: 40px;
+}
 }
 
 .repo a {
