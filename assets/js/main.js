@@ -2,6 +2,7 @@
   "use strict";
 var home = true;
 
+  // Check if mobile
   if (Modernizr.touch) { 
     $('.social-links').removeClass('hoverable').addClass('nohover');
     $('.repo').removeClass('hoverable').addClass('nohover');
@@ -68,7 +69,7 @@ var home = true;
     }
   });
 
-  // Hide scroll
+  // Change header opacity on scroll
   $(document).scroll(()=>{
     if(document.scrollingElement.scrollTop != 0){
         $('header').removeClass('opacity95');

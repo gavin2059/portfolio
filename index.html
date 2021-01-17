@@ -35,11 +35,11 @@
     $('.credits').removeAttr('hidden');
     $('.credits').fadeIn("slow");
   });
-
   </script>
 
 </head>
 
+<!-- Loading GIF -->
 <div class="se-pre-con">
   <img src="/assets/img/loading.gif">
 </div>
@@ -52,8 +52,6 @@
     <div class="container">
 
       <h1><a href="index.html">Ze Yuan Zhang</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
       <h2 class="descrip">Student in <span>Computer Science & Applied Math</span></h2>
 
       <nav class="nav-menu d-none d-lg-block">
@@ -74,14 +72,11 @@
         <a href="assets/Resume.pdf" class="resume" target="_blank"><i class="icofont-clip-board"></i><span>Resume</span></a>
         <br>
         <a class="email"><i class="icofont-mail-box"></i><span>Email</span></a>
-
-       
       </div>
-    
-
     </div>
   </header><!-- End Header -->
-    <div class="credits" hidden>
+
+  <div class="credits" hidden>
     Art By <a href="https://www.deviantart.com/jessicawoulfe">Jessica Woulfe</a>
   </div>
 
@@ -170,7 +165,7 @@
             I worked with Dr. Varman to implement Fair-EDF, an earliest-deadline-first request scheduler seeking to fulfill the same percentage of requests from different clients. This involved using exploring different linear regression and decision tree models to predict SSD processing times which are used in the algorithm to predict whether put a request in the low priority queue. 
             </p>
             <p>
-            Using a regression tree with 4 nodes per branch, we were able to accomplish fast training (0.14s on a training set of 5000+ requests) and predictions (52000/second) with a 15% error on average on a YACSIM simulated SSD receiving requests from a single client. 
+            Using a decision tree with 4 nodes per branch, we were able to accomplish fast training (0.14s on a training set of 5000+ requests, 52000 observations/second) with a 15% error on average on a YACSIM simulated SSD receiving requests from a single client. 
             </p>
           </div>
         </div>
@@ -207,7 +202,7 @@
             <div class="icon"><i class="icofont-music-notes"></i><span>&nbspApril 2016 - April 2019</span></div>
             <h4>General Manager, UNA Community Youth Band</h4>
             <p>
-              I was a percussionist and pianist for the UNA Youth Band, a concert band run by youth in the Vancouver area focused on providing students who were not able to be part of a school band a similar opportunity. As a promoter in 2017 and 2018, and manager in 2019, I increased the band size by 33% by streamlining the recruiting process with a list of local music instructors. As the manager, I organized 12 concerts, the rehearsal venue, and distribution of volunteer hours to 20+ students. I also contributed to making the website and our budget. 
+              I was a percussionist and pianist for the UNA Youth Band, a concert band run by youth in the Vancouver area focused on providing students who were not able to be part of a school band a similar opportunity. As a promoter in 2017 and 2018, and manager in 2019, I increased the band's size by 33% by streamlining the recruiting process with a list of local music instructors. As the manager, I organized 12 concerts, the rehearsal venue, and distribution of volunteer hours to 20+ students. I also contributed to making the website and our budget. 
 
              </p>
           </div>
@@ -230,15 +225,17 @@
 
       <div class="container">
         <div class="row">
-        <div class= "d-flex align-items-stretch">
+
+ 		<div class= "d-flex align-items-stretch">
           <div class="icon-box">
-            <div class="icon"><i class="icofont-sale-discount"></i><span>&nbspDec 2020 - Present</span></div>
-            <h4>When To Buy</h4>
+            <div class="icon"><i class="icofont-loop"></i><span>&nbspDec 2020 - Present</span></div>
+            <h4>(no)Pedal</h4>
             <p>
-            I'm creating a program to predict the prices of products with Facebook Prophet, a Time Series forecasting model. I'm hoping that users of this program (myself included :p) can have a better shot at getting products they want with the best deals.
+            Recently, I started playing the guitar, and wanted to make a completely digital substitute to a physical loop pedal that can be used anywhere, with an electronic or acoustic guitar. I've created a version that is somewhat functional, but due to the inaccurate timing of Javascript's task scheduling, I will need to re-write the code using web-audio libraries such as Tone.js. I also need to trim the leading and trailing silence in recordings (when users move hands between the guitar and 'pedal'), add mobile compatibility, and improve audio quality (possibly through a noise gate and EQing recordings).
             </p>
-            <div class="social-links repo">
-              <a href="https://github.com/gavin2059/when-to-buy" target="_blank"><i class="bx bxl-github"></i><span>Repo.</span></a>
+              <div class="social-links repo">
+              <a href="https://github.com/gavin2059/nopedal" target="_blank"><i class="bx bxl-github"></i><span>Repo.</span></a>
+              <a href="https://gavin2059.github.io/nopedal/" target="_blank"><i class="icofont-music"></i><span>Try it!</span></a>
             </div>
           </div>
         </div>
@@ -247,15 +244,30 @@
 
         <div class= "d-flex align-items-stretch">
           <div class="icon-box">
-            <div class="icon"><i class="icofont-loop"></i><span>&nbspDec 2020 - Present</span></div>
-            <h4>(no)Pedal</h4>
+            <div class="icon"><i class="icofont-eye-alt"></i><span>&nbspDec 2020</span></div>
+            <h4>Who's Distracted?</h4>
             <p>
-            Recently, I started playing the guitar, and wanted to make a completely digital substitute to a physical loop pedal that can be used anywhere, with an electronic or acoustic guitar. Right now, the looper is technically functional, but I am still solving several issues including poor audio recording quality, and the inevitable delay between users pressing record and moving their hands to the guitar. I'm thinking of using some sort of Machine Learning algorithm to detect beginning and ending silence to clip the recording.
-            This is my first webapp project so I'm running into many roadblocks but enjoying the learning process :)
+           	With a group of 2 other friends, I made a Google Chrome extension for study groups which keeps people focused by publicy shaming them if they get distracted ;). If a user visits a non-productive website, all other users in the same lobby as them will be alerted. I primarily programmed the front-end, which consists of the lobby joining and alert interface, and tracking and communicating user activity with a Flask server via socket.io. I also helped with writing the Flask server which communicating with users grouped into lobbies, and detecting whether a user is distracted by processing URLs they visit with a list of 'distracting' websites.
             </p>
               <div class="social-links repo">
-              <a href="https://github.com/gavin2059/nopedal" target="_blank"><i class="bx bxl-github"></i><span>Repo.</span></a>
-              <a href="https://gavin2059.github.io/nopedal/" target="_blank"><i class="icofont-music"></i><span>Try it!</span></a>
+              <a href="https://github.com/gavin2059/distracted" target="_blank"><i class="bx bxl-github"></i><span>Repo.</span></a>
+            </div>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class= "d-flex align-items-stretch">
+          <div class="icon-box">
+            <div class="icon"><i class="icofont-computer"></i><span>&nbspDec 2020</span></div>
+            <h4>This Website</h4>
+            <p>
+            To show what I'm doing and get some practice with web development, I made this website using Bootstrap and jQuery.
+            While it is made from a template, by personalizing the built-in features and functionality, as well as adding my own,
+            I became much more comfortable working with front-end web design.
+            </p>
+            <div class="social-links repo">
+              <a href="https://github.com/gavin2059/portfolio" target="_blank"><i class="bx bxl-github"></i><span>Repo.</span></a>
             </div>
           </div>
         </div>
@@ -297,7 +309,6 @@
   </section><!-- End projects Section -->
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/jquery/jquery.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
 
@@ -305,7 +316,4 @@
   <script src="assets/js/main.js"></script>
 
 </body>
-
-
-
 </html>
