@@ -7,13 +7,15 @@
     $(".social-links").removeClass("hoverable").addClass("nohover");
     $(".repo").removeClass("hoverable").addClass("nohover");
   } else {
-    console.log("hoverable");
     $(".social-links").addClass("hoverable").removeClass("nohover");
     $(".repo").addClass("hoverable").removeClass("nohover");
   }
 
   // Nav Menu
   $(document).on("click", ".nav-menu a, .mobile-nav a", function (e) {
+    if (!$("#header").hasClass("opacity95")) {
+      $("#header").addClass("opacity95");
+    }
     if (
       location.pathname.replace(/^\//, "") ==
         this.pathname.replace(/^\//, "") &&
@@ -81,14 +83,10 @@
   // Change header opacity on scroll
   $(document).scroll(() => {
     if (document.scrollingElement.scrollTop != 0) {
-      $("header").removeClass("opacity95");
-      if (!$("header").hasClass("opacity100")) {
-        $("header").addClass("opacity100");
-      }
+      $("#header").removeClass("opacity95");
     } else {
-      $("header").removeClass("opacity100");
-      if (!$("header").hasClass("opacity95")) {
-        $("header").addClass("opacity95");
+      if (!$("#header").hasClass("opacity95")) {
+        $("#header").addClass("opacity95");
       }
     }
   });
@@ -129,11 +127,11 @@
     var $mobile_nav = $(".nav-menu").clone().prop({
       class: "mobile-nav d-lg-none",
     });
-    $("body").append($mobile_nav);
-    $("body").prepend(
+    $("#header").append($mobile_nav);
+    $("#header").prepend(
       '<button type="button" class="mobile-nav-toggle d-lg-none" id="mobile-menu-btn"><i class="icofont-navigation-menu"></i></button>'
     );
-    $("body").append('<div class="mobile-nav-overly"></div>');
+    $("#header").append('<div class="mobile-nav-overly"></div>');
 
     $("#mobile-menu-btn").click(() => {
       if ($(".credits").is(":visible")) {
@@ -151,6 +149,13 @@
         "icofont-navigation-menu icofont-close"
       );
       $(".mobile-nav-overly").toggle();
+      if (document.scrollingElement.scrollTop == 0) {
+        if ($("body").hasClass("mobile-nav-active")) {
+          $("#header").removeClass("opacity95");
+        } else {
+          $("#header").addClass("opacity95");
+        }
+      }
     });
 
     $(document).click(function (e) {

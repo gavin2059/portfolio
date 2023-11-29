@@ -308,12 +308,16 @@ h6 {
 /* Mobile Navigation */
 .mobile-nav-toggle {
   position: fixed;
-  right: 15px;
-  top: 15px;
+  /* position: absolute; */
+  /* display: flex; */
+  /* align-items: center; */
+  top: 20.25px; /* (80 - 39.5) / 2 */
+  right: 16px; /* 20.25 - (48 - 39.5) / 2 */
+  /* top: 15px; */
   z-index: 9999;
   border: 0;
   background: none;
-  font-size: 24px;
+  font-size: 36px;
   transition: all 0.4s;
   outline: none !important;
   line-height: 1;
@@ -324,7 +328,14 @@ h6 {
 .mobile-nav-toggle i {
   color: #fff;
 }
-
+@media (max-width: 768px) {
+  .mobile-nav-toggle {
+    font-size: 24px;
+    top: 16.75px;
+    right: 12px;
+    /* right: 9.25px; */
+  }
+}
 .mobile-nav {
   position: fixed;
   top: 0px;
@@ -336,7 +347,7 @@ h6 {
   /* left: 15px; */
   z-index: 9998;
   overflow-y: auto;
-  background: rgba(0, 0, 0, 0.88);
+  background: rgba(0, 0, 0, 1);
   transition: ease-in-out 0.2s;
   opacity: 0;
   visibility: hidden;
