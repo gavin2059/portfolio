@@ -121,6 +121,7 @@ h6 {
   align-items: center;
   z-index: 997;
   overflow-y: auto;
+  background: rgba(0, 0, 0, 0.33);
 }
 
 #header *,
@@ -146,14 +147,15 @@ h6 {
 
 #header h2 {
   font-size: 24px;
-  margin-top: 8px;
-  color: rgba(255, 255, 255, 0.98);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #fff;
 }
 
 #header h2 span {
   color: #fff;
-  border-bottom: 4px solid var(--accent-color-hex);
-  padding-bottom: 6px;
+  border-bottom: 3px solid var(--accent-color-hex);
+  padding-bottom: 4px;
 }
 
 #header img {
@@ -233,6 +235,7 @@ h6 {
     font-size: 20px;
     line-height: 30px;
     margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   #header h2 span {
@@ -269,7 +272,7 @@ h6 {
 .nav-menu a {
   display: block;
   position: relative;
-  color: rgba(255, 255, 255, 0.98);
+  color: #fff;
   font-size: 19px;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -368,7 +371,7 @@ h6 {
   top: 0;
   left: 0;
   position: fixed;
-  background: rgba(9, 9, 9, 0.6);
+  background: rgba(0, 0, 0, 0.6);
   overflow: hidden;
   display: none;
   transition: ease-in-out 0.2s;
