@@ -310,7 +310,7 @@ h6 {
   position: fixed;
   right: 15px;
   top: 15px;
-  z-index: 9998;
+  z-index: 9999;
   border: 0;
   background: none;
   font-size: 24px;
@@ -327,19 +327,22 @@ h6 {
 
 .mobile-nav {
   position: fixed;
-  top: 55px;
-  right: 15px;
-  bottom: 15px;
-  left: 15px;
-  z-index: 9999;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  /* top: 55px; */
+  /* right: 15px; */
+  /* bottom: 15px; */
+  /* left: 15px; */
+  z-index: 9998;
   overflow-y: auto;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.88);
   transition: ease-in-out 0.2s;
   opacity: 0;
   visibility: hidden;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   padding: 10px 0;
-  border: 2px solid rgba(255, 255, 255, 0.12);
+  /* border: 2px solid rgba(255, 255, 255, 0.12); */
 }
 
 .mobile-nav * {
@@ -371,7 +374,7 @@ h6 {
   top: 0;
   left: 0;
   position: fixed;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0);
   overflow: hidden;
   display: none;
   transition: ease-in-out 0.2s;
