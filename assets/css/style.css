@@ -121,7 +121,7 @@ h6 {
   align-items: center;
   z-index: 997;
   overflow-y: auto;
-  background: rgba(0, 0, 0, 0.33);
+  background: rgba(0, 0, 0, 0.66);
 }
 
 #header *,
