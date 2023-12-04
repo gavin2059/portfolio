@@ -88,7 +88,7 @@
     <div class="about-me container">
 
       <div class="section-title">
-        <h2>About</h2>
+        <h2>about</h2>
         <p>Hello!</p>
       </div>
 
@@ -123,9 +123,9 @@
       <div class="row">
         <div class="col-lg-4">
           <ul><strong>Languages</strong>
-            <li><i class="icofont-rounded-right"></i>Python, Java, C, Solidity</li>
+            <li><i class="icofont-rounded-right"></i>Python, Java, C++, Solidity</li>
             <li><i class="icofont-rounded-right"></i>HTML, CSS, Javascript</li>
-            <li><i class="icofont-rounded-right"></i>MATLAB, SQL, Assembly</li>
+            <li><i class="icofont-rounded-right"></i>ChucK, MATLAB, SQL, Assembly</li>
           </ul>
         </div>
         <div class="col-lg-4">
@@ -134,6 +134,7 @@
             <li><i class="icofont-rounded-right"></i>React, Flask, Express, Docker</li>
             <li><i class="icofont-rounded-right"></i>Firebase, MongoDB</li>
             <li><i class="icofont-rounded-right"></i>Ethers, Hardhat</li>
+            <li><i class="icofont-rounded-right"></i>JUCE, Librosa</li>
 
           </ul>
         </div>
@@ -200,23 +201,6 @@
                 I also increased the app's speed by over 50% in some cases by optimizing restaurants and images shown.
               </p>
               </div>
-          </div>
-          <hr>
-
-          <div class= "d-flex align-items-stretch">
-            <div class="icon-box">
-              <div class="icon"><i class="icofont-brand-shell"></i><span>&nbspJan 2022 - May 2022</span></div>
-              <h4>Student Data Scientist, Shell Hydraulics</h4>
-              <p>
-                Stick-Slip in pistons is a dangerous and wasteful phenomenon where the piston begins to vibrate intensely and erratically.
-                I analyzed Stick-Slip in pistons by coordinating a team of peers and working with mentors from Shell Hydraulics.
-              </p>
-              <P>
-                  Together, we extracted features from over 300 csv files using Detrended Fluctuation Analysis and Wavelet Transform.
-                  Then, we classified files for varying magnitudes and intervals of Stick-Slip using a Convolutional Neural Network.
-                  We also created a user-friendly dashboard for anyone to test inputted data for Stick-Slip using Streamlit.
-                </P>
-            </div>
           </div>
           <hr>
 
@@ -307,6 +291,23 @@
       <div class="container">
         <div class="row">
 
+          <div class= "d-flex align-items-stretch">
+            <div class="icon-box">
+              <div class="icon"><i class="icofont-cloudapp"></i><span>&nbspNov 2023 - Present</span></div>
+              <h4>Equalizer Plugin</h4>
+              <p>
+                I created an audio equalizer with lowcut, highcut, peak filters compatible with all major platforms using C++ and JUCE.
+                To render the spectrum analyzer, I used the Fast Fourier Transform.
+                Currently, I'm prototyping a noise reduction feature with Spectral Subtraction, Wiener Filtering, 
+                and the Redundant Convolutional Encoder-Decoder Network in Python with Librosa.
+              </p>
+              <div class="social-links repo">
+                <a href="https://github.com/gavin2059/SimpleEQ" target="_blank"><i class="bx bxl-github"></i><span>Repo.</span></a>
+              </div>
+            </div>
+          </div>  
+          <hr>
+
 
           <div class= "d-flex align-items-stretch">
             <div class="icon-box">
@@ -315,16 +316,34 @@
               <p>
                 As a team of 4 peers under the guidance of Dr. Dan Wallach, we designed a distributed storage system similar to Amazon S3 using master-worker nodes architecture.
                 We then implemented it as a secure and horizontally scalable system using AWS, Flask, and Swagger.
-                Our system allowed uploads and downloads under a tree-like filesystem, and could double or half its nodes on-demand.
+                Our system could double or half its nodes on-demand with through-put scaling nearly linearly with worker count.
+                It could protect uploaded contents under node
                 Additionally, we created a responsive dashboard using React and ChakraUI for monitoring health and performance metrics.
               </p>
               <div class="social-links repo">
                 <a href="https://github.com/RiceComp413-Fall2022/S4" target="_blank"><i class="bx bxl-github"></i><span>Repo.</span></a>
               </div>
             </div>
-          </div>
-  
+          </div>  
           <hr>
+
+          <div class= "d-flex align-items-stretch">
+            <div class="icon-box">
+              <div class="icon"><i class="icofont-brand-shell"></i><span>&nbspJan 2022 - May 2022</span></div>
+              <h4>Shell Hydraulics Stick-Slip Analysis</h4>
+              <p>
+                Stick-Slip in pistons is a dangerous and wasteful phenomenon where the piston begins to vibrate intensely and erratically.
+                I analyzed Stick-Slip in pistons by coordinating a team of peers and working with mentors from Shell Hydraulics.
+              </p>
+              <p>
+                Together, we experimented with 300+ files using Detrended Fluctuation Analysis and Wavelet Transform.
+                We Classified files for varying degrees, intervals of Stick-Slip with Fast Fourier Transform and Hampel Identifier
+                We also created a user-friendly dashboard for anyone to test inputted data for Stick-Slip using Streamlit.
+              </p>
+            </div>
+          </div>
+          <hr>
+
 
           <div class= "d-flex align-items-stretch">
             <div class="icon-box">
